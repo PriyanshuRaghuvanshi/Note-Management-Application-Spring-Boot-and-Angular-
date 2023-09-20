@@ -1,0 +1,20 @@
+<div class="main-container">
+  <div class="header py-4" style="background-color: rgb(70, 76, 87);">
+      <h3 class="product-title" routerLink="/">Note App</h3>
+  </div>
+
+  <div class="container">
+      <h1>User's Notes</h1><br>
+      <div class="row">
+          <div class="col-md-4" *ngFor="let note of notes">
+              <div class="card mb-3 note-card">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ note.title }}</h5>
+                      <p class="card-text">{{ note.description }}</p>
+                      <button (click)="deleteNote(note.id)">delete</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

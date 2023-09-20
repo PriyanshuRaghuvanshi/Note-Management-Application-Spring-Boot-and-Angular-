@@ -1,0 +1,40 @@
+<mat-toolbar style="background-color: rgb(99, 105, 118); color: rgb(0, 0, 0); padding: 3rem; font-weight: bold; font-size: 2rem;">
+    <a>Note App</a>
+    <span class="example-spacer"></span>
+    <button routerLink="/"> <mat-icon>home</mat-icon> </button>
+  </mat-toolbar>
+  
+  <div class="container">
+    <form class="example-form" #loginForm="ngForm" (ngSubmit)="loginUser()">
+      <small>{{msg}}</small>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [(ngModel)]="user.email" required name="email" #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors['required']">Email Id is required Field</small>
+          <small class="text-danger" *ngIf="email.errors['email']">Enter a valid EmailId</small>
+        </div>
+        
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [(ngModel)]="user.password" required name="password" #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched">
+        
+        <div *ngIf="password.errors && (password.invalid && password.touched)">
+          <small class="text-danger" *ngIf="password.errors['required']">Password is required Field</small>
+        </div>
+      </mat-form-field>
+  
+      <div class="example-button-row">
+        <button class="btn btn-primary" type="submit" color="primary">Login</button>
+      </div>
+  
+      <div class="newUser">
+        <a routerLink="/signup">Register New User</a>
+      </div>
+    </form>
+  </div>
+  

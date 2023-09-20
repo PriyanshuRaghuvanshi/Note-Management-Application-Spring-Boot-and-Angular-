@@ -1,0 +1,35 @@
+
+
+   /* Custom CSS for note cards */
+.note-card {
+  background-color: #f0f0f0; /* Light gray background */
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.note-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* White background on hover */
+  border: 1px solid #ddd;
+}
+
+.card-title {
+  color: #333; /* Dark gray title */
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px; /* Slightly smaller font size */
+}
+
+.card-text {
+  color: #555; /* Medium gray text color */
+  text-align: center;
+}
+
+/* Optional: Add animation for hover effect */
+.note-card:hover .card-body {
+  transition: background-color 0.2s ease;
+  background-color: #9ad2d6; /* Light gray background on hover */
+  color: #333; /* Dark gray text color on hover */
+}

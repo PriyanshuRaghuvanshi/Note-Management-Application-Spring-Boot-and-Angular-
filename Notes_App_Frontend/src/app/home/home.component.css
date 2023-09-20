@@ -1,0 +1,40 @@
+.community-section {
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+.heading {
+  font-size: 36px;
+  color: #333; /* Dark gray text color */
+  margin-bottom: 30px;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.create-notes,
+.show-notes {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.create-notes {
+  background-color: #976aac; 
+  border-color: #28a745;
+  color: #fff; 
+}
+
+.create-notes:hover {
+  background-color: #1d8b3f; 
+}
+
+.show-notes {
+  background-color: #976aac; /* Green button color */
+  border-color: #28a745;
+  color: #fff; 
+}
+
+.show-notes:hover {
+  background-color: #1d8b3f; 
+}
